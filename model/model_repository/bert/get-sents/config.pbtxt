@@ -1,0 +1,37 @@
+name: "get-sents"
+backend: "python"
+max_batch_size : 0
+input [
+  {
+    name: "text"
+    data_type: TYPE_STRING
+    dims: [ -1 ]
+  }
+]
+output [
+  {
+    name: "sent_text"
+    data_type: TYPE_STRING
+    dims: [ -1 ]
+  },
+  {
+    name: "sent_offset"
+    data_type: TYPE_INT32
+    dims: [ -1 ]
+  },
+  {
+    name: "sent_length"
+    data_type: TYPE_INT32
+    dims: [ -1 ]
+  },
+  {
+    name: "sent_index"
+    data_type: TYPE_INT32
+    dims: [ -1 ]
+  },
+  {
+    name: "group_index"
+    data_type: TYPE_INT32
+    dims: [ -1 ]
+  }
+]
